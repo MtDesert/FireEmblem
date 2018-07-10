@@ -1,0 +1,117 @@
+--[[武器数据表,表中有大量item,每个item有如下数据(顺序无关)
+name是名称,用来查询的主要依据,每个item不应该重名
+chinese中文名,用来支持翻译,可无
+type武器类型,用来判断是什么武器
+
+以下几乎是所有武器都会有的基础数值
+price价格,可无(比如非卖品)
+durability耐久度,可无(即使用次数无限)
+lv武器等级,可无(比如特定角色的专用武器)
+weight武器重量,可无(默认为0)
+range攻击范围,可无(默认为1-1)
+might威力,可无(比如此威力根据某些公式计算)
+hit命中率,可无(比如此威力根据某些公式计算)
+critical必杀率,可无(比如此威力根据某些公式计算)
+note说明,可无
+
+以下是特殊数值
+armorBreak(boolean)破甲,对抗重甲兵种时有利
+knightBreak(boolean)破骑,对抗陆骑兵兵种有利
+dragonSlay(boolean)斩龙,对抗龙骑士或龙族有利
+antiAir(boolean)防空,对抗空军有利
+magic(boolean)魔法,表明该武器攻击时作为魔法攻击
+attribute属性,主要用于魔法武器(非魔法武器也可以)
+devil(boolean)恶魔,攻击时候可能会损伤自己
+vulnerary(boolean),可当伤药用
+]]
+
+Weapons={
+	{name="IronSword",chinese="铁剑",type=Sword,
+		price=320,durability=42,weight=2,might=5,hit=100},
+	{name="SteelSword",chinese="钢剑",type=Sword,
+		price=500,durability=38,weight=4,might=8,hit=80},
+	{name="SilverSword",chinese="银剑",type=Sword,
+		price=2000,durability=17,weight=3,might=12,hit=100},
+	{name="KillSword",chinese="必杀剑",type=Sword,
+		price=1250,durability=22,weight=2,might=8,hit=100,critical=20},
+	{name="ArmorKiller",chinese="破甲剑",type=Sword,
+		price=760,durability=22,weight=2,might=5,hit=80,
+		armorBreak=true},
+	{name="ThunderSword",chinese="雷剑",type=Sword,
+		price=1600,durability=20,weight=2,might=7,hit=90,
+		magic=true,attribute=Thunder,range={1,2}},
+	{name="DragonKiller",chinese="杀龙剑",type=Sword,
+		price=nil,durability=16,weight=2,might=6,hit=80,
+		dragonSlay=true},
+	{name="DevilSword",chinese="恶魔剑",type=Sword,
+		price=nil,durability=19,weight=5,might=17,hit=100,
+		devil=true},
+
+	--专用剑
+	{name="Rapier",chinese="西洋剑",type=Sword,
+		price=900,durability=28,weight=1,might=5,hit=100,critical=10,
+		armorBreak=true,knightBreak=true},
+	{name="MiracleSword",chinese="奇迹剑",type=Sword,
+		price=nil,durability=24,weight=1,might=18,hit=100,critical=10},
+	{name="Falcion",chinese="圣剑.法尔西昂",type=Sword,
+		price=nil,durability=nil,weight=3,might=10,hit=100,
+		dragonSlay=true,vulnerary=true},
+	--枪
+	{name="IronSpear",chinese="铁枪",type=Spear,
+		price=450,durability=38,weight=6,might=8,hit=80},
+	{name="SilverSpear",chinese="银枪",type=Spear,
+		price=1880,durability=20,weight=7,might=12,hit=80},
+	{name="KnightKiller",chinese="骑士杀手",type=Spear,
+		price=820,durability=14,weight=5,might=5,hit=90,
+		knightBreak=true},
+	{name="Javelin",chinese="投枪",type=Spear,
+		price=600,durability=22,weight=6,might=7,hit=70,
+		range={1,2}},
+	{name="Gladius",chinese="圣枪.古拉迪乌斯",type=Spear,
+		price=nil,durability=17,weight=4,might=20,hit=100,
+		vulnerary=true},
+	--斧
+	{name="IronAxe",chinese="铁斧",type=Axe,
+		price=360,durability=43,weight=7,might=7,hit=80},
+	{name="SteelAxe",chinese="钢斧",type=Axe,
+		price=550,durability=31,weight=9,might=9,hit=70},
+	{name="Hammer",chinese="铁锤",type=Axe,
+		price=300,durability=38,weight=6,might=8,hit=80,
+		armorBreak=true},
+	{name="Hatchet",chinese="投斧",type=Axe,
+		price=450,durability=13,weight=9,might=5,hit=60,
+		range={1,2}},
+	{name="DevilAxe",chinese="恶魔斧",type=Axe,
+		price=nil,durability=9,weight=14,might=20,hit=70},
+	--弓
+	{name="IronBow",chinese="铁弓",type=Bow,
+		price=400,durability=33,weight=7,might=7,hit=80},
+	{name="SteelBow",chinese="钢弓",type=Bow,
+		price=560,durability=28,weight=7,might=7,hit=80},
+	{name="SteelBow",chinese="银弓",type=Bow,
+		price=2200,durability=24,weight=7,might=7,hit=80},
+	{name="Valcun",chinese="弩",type=Bow,
+		price=950,durability=37,weight=7,might=7,hit=80,critical=20},
+	{name="Parthia",chinese="圣弓.帕尔提亚",type=Bow,
+		price=nil,durability=17,weight=7,might=7,hit=80,
+		holyWater=true},
+	--弩车
+	{name="Helepolis",chinese="巨弩",type=Ballista,
+		price=1000,durability=27,weight=7,might=12,hit=80,
+		antiAir=true},
+	{name="StoneThrower",chinese="投石器",type=Ballista,
+		price=1280,durability=43,weight=13,might=15,hit=80},
+	{name="FireBolt",chinese="火弩箭",type=Ballista,
+		price=1400,durability=23,weight=10,might=12,hit=80,
+		attribute=Fire},
+	{name="ThunderBolt",chinese="雷弩箭",type=Ballista,
+		price=nil,durability=23,weight=11,might=10,hit=80,
+		attribute=Thunder,ballistaBreak=true},
+	{name="Cannon",chinese="大炮",type=Ballista,
+		price=nil,durability=19,weight=12,might=18,hit=80},
+	--龙石
+	{name="FireDragonStone",chinese="火龙石",type=DragonStone,weight=3,might=16,hit=80,def=12},
+	{name="DivineDragonStone",chinese="神龙石",type=DragonStone,weight=1,might=12,hit=100,def=15},
+	{name="DemonDragonStone",chinese="魔龙石",type=DragonStone,weight=6,might=18,hit=90,def=16},
+	{name="EarthDragonStone",chinese="地龙石",type=DragonStone,weight=10,might=20,hit=70,def=23},
+}
