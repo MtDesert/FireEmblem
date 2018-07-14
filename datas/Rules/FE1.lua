@@ -7,6 +7,7 @@ specialEffectList={
 	{"antiAir","isAirForce"},--对空武器
 	{"dragonSlay","isDragon"},--杀龙武器
 	{"ballistaBreak","isBallista"},--杀弩车武器
+	{"monsterSlay","isMonster"},--杀怪武器
 }
 
 --有无特效判断
@@ -16,6 +17,10 @@ function hasSpecialEffect(weaponData,classData)
 			if weaponData[v[1]] == true and classData[v[2]] == true then
 				return true
 			end
+		end
+		--通用情况,弓克飞行系
+		if weaponData.type==Bow and classData.isAirForce then
+			return true
 		end
 	end
 end

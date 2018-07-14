@@ -10,7 +10,8 @@ for k,v in pairs(WeaponType) do
 end
 
 dofile("../Weapons/FE1.lua")
-dofile("../Characters/NewMisteryOfEmblem.lua")
+dofile("../Characters/NewMysteryOfEmblem.lua")
+dofile("../Characters/Echoes.lua")
 dofile("../Rules/FE1.lua")
 
 --从表结构table中获取首个名为name的数据
@@ -138,11 +139,11 @@ end
 
 --开始模拟
 math.randomseed(os.time())
-local unitA=Unit("Cain",20)
-local unitB=Unit("Jagen",20)
+local unitA=Unit("Alm",20)
+local unitB=Unit("Celica",20)
 printUnit(unitA)
 printUnit(unitB)
-unitA.equipWeapon=getDataByName(Weapons,"Rapier")
+unitA.equipWeapon=getDataByName(Weapons,"IronBow")
 unitB.equipWeapon=getDataByName(Weapons,"Rapier")
 unitAttackUnit(unitA,unitB)
 print(unitA.name.."\t"..unitA.hp.."/"..unitA.ability.mhp)

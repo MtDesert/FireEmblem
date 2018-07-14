@@ -41,10 +41,10 @@ ClassesData={
 	{name="SilverKnight",chinese="银骑士",isKnight=true},
 	{name="GoldenKnight",chinese="金骑士",isKnight=true},
 --空军
-	{name="PegasusKnight",chinese="天马骑士"},
-	{name="DragonKnight",chinese="龙骑士"},
-	{name="DragonMaster",chinese="龙骑统帅"},
-	{name="FalconKnight",chinese="隼骑士"},
+	{name="PegasusKnight",chinese="天马骑士",isAirForce=true},
+	{name="DragonKnight",chinese="龙骑士",isAirForce=true},
+	{name="DragonMaster",chinese="龙骑统帅",isAirForce=true},
+	{name="FalconKnight",chinese="隼骑士",isAirForce=true},
 --剑术系
 	{name="Sworder",chinese="剑士"},
 	{name="MagicSworder",chinese="魔剑士"},
@@ -60,8 +60,8 @@ ClassesData={
 	{name="Ballista",chinese="弩车"},
 
 	{name="Soldier",chinese="士兵"},
-	{name="ArmorSoldier",chinese="装甲兵"},
-	{name="General",chinese="将军"},
+	{name="ArmorSoldier",chinese="装甲兵",isArmor=true},
+	{name="General",chinese="将军",isArmor=true},
 
 	{name="Barbarian",chinese="野蛮人"},
 	{name="Bandit",chinese="土匪"},
