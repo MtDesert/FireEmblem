@@ -1,30 +1,3 @@
---[[武器数据表,表中有大量item,每个item有如下数据(顺序无关)
-name是名称,用来查询的主要依据,每个item不应该重名
-chinese中文名,用来支持翻译,可无
-type武器类型,用来判断是什么武器
-
-以下几乎是所有武器都会有的基础数值
-price价格,可无(比如非卖品)
-durability耐久度,可无(即使用次数无限)
-lv武器等级,可无(比如特定角色的专用武器)
-weight武器重量,可无(默认为0)
-range攻击范围,可无(默认为1-1)
-might威力,可无(比如此威力根据某些公式计算)
-hit命中率,可无(比如此威力根据某些公式计算)
-critical必杀率,可无(比如此威力根据某些公式计算)
-note说明,可无
-
-以下是特殊数值
-armorBreak(boolean)破甲,对抗重甲兵种时有利
-knightBreak(boolean)破骑,对抗陆骑兵兵种有利
-dragonSlay(boolean)斩龙,对抗龙骑士或龙族有利
-antiAir(boolean)防空,对抗空军有利
-magic(boolean)魔法,表明该武器攻击时作为魔法攻击
-attribute属性,主要用于魔法武器(非魔法武器也可以)
-devil(boolean)恶魔,攻击时候可能会损伤自己
-vulnerary(boolean),可当伤药用
-]]
-
 MadePlace="Akania"
 WeaponsData={
 	{name="IronSword",chinese="铁剑",type=Sword,
@@ -49,7 +22,7 @@ WeaponsData={
 		curse=true},
 
 	--专用剑
-	{name="Rapier",chinese="西洋剑",type=Sword,
+	{name="Rapier",chinese="突刺剑",type=Sword,
 		price=900,durability=28,weight=1,might=5,hit=100,critical=10,
 		armorBreak=true,knightBreak=true},
 	{name="MiracleSword",chinese="奇迹剑",type=Sword,
@@ -83,7 +56,8 @@ WeaponsData={
 		price=450,durability=13,weight=9,might=5,hit=60,
 		range={1,2}},
 	{name="DevilAxe",chinese="恶魔斧",type=Axe,
-		price=nil,durability=9,weight=14,might=20,hit=70},
+		price=nil,durability=9,weight=14,might=20,hit=70,
+		curse=true},
 	--弓
 	{name="IronBow",chinese="铁弓",type=Bow,
 		price=400,durability=33,weight=7,might=7,hit=80},

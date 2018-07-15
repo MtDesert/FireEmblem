@@ -41,10 +41,10 @@ WeaponsData={
 	{name="MeteorSpear",chinese="流星枪",type=Spear,
 		weight=0,might=10,hit=100,critical=50,
 		autoRecover=true},
-	{name="MoonLightSpear",chinese="月光枪",type=Spear,
+	{name="LunaSpear",chinese="月光枪",type=Spear,
 		weight=1,might=10,hit=100,
 		autoRecover=true,terrainInvalid=true},
-	{name="SteelSpear",chinese="钢枪",type=Spear,
+	{name="SunSpear",chinese="太阳枪",type=Spear,
 		weight=2,might=20,hit=80,
 		autoRecover=true},
 	--弓

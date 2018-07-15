@@ -50,7 +50,7 @@ WeaponsData={
 		statusSilence=true},
 	{name="SleepSword",chinese="睡眠剑",type=Sword,
 		price=15000,durability=50,weight=12,might=8,hit=70,
-		ladyOnly=true,sklPray=true},
+		statusSleep},
 	--魔法剑
 	{name="FlameSword",chinese="炎剑",type=Sword,
 		price=10000,durability=50,weight=5,might=12,hit=70,
@@ -113,7 +113,7 @@ WeaponsData={
 	{name="Hatchet",chinese="投斧",type=Axe,
 		price=300,durability=50,weight=20,might=10,hit=50,
 		range={1,2}},
-	{name="Hatchet",chinese="圣斧.",type=Axe,
+	{name="Swanchika",chinese="圣斧.斯万奇卡",type=Axe,
 		price=50000,durability=50,weight=20,might=30,hit=70,
 		range={1,2},def=20,mdf=10},
 	--弓
@@ -135,7 +135,7 @@ WeaponsData={
 	{name="IronArch",chinese="铁弩",type=Ballista,
 		price=65535,durability=255,weight=30,might=25,hit=60,range={3,10}},
 	{name="KillerArch",chinese="必杀弩",type=Ballista,
-		price=65535,durability=255,weight=30,might=20,hit=100,range={3,10}},
+		price=65535,durability=255,weight=30,might=20,hit=100,range={3,10},sklCritical=true},
 	{name="GreatArch",chinese="巨弩",type=Ballista,
 		price=65535,durability=255,weight=30,might=30,hit=50,range={3,10}},
 }
