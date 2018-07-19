@@ -1,0 +1,31 @@
+ItemsData={
+	--普通物品
+	{name="DoorKey",chinese="门钥匙",type=Item},
+	{name="BridgeKey",chinese="桥钥匙",type=Item},
+	{name="ThiefKey",chinese="盗贼钥匙",type=Item},
+	{name="Vulnerary",chinese="伤药",type=Item},
+	{name="HolyWater",chinese="圣水",type=Item},
+	--能力提升
+	{name="PowerRing",chinese="力量戒指",type=Item,price=2550,pow=4},
+	{name="SecretBook",chinese="秘传书",type=Item,price=2550,skl=5},
+	{name="SpeedRing",chinese="速度戒指",type=Item,price=2550,spd=6},
+	{name="GoddessStatue",chinese="女神像",type=Item,price=2550,lck=7},
+	{name="DragonShield",chinese="龙盾",type=Item,price=2550,def=3},
+	{name="Talisman",chinese="护身符",type=Item,price=2550,mdf=7},
+	{name="AngelCloth",chinese="天使衣",type=Item,price=2550,mhp=9},
+	{name="Manual",chinese="手册",type=Item,wpnLv=5},
+	{name="Boots",chinese="靴",type=Item,price=2550,mov=4},
+	--转职
+	{name="KnightMedal",chinese="骑士勋章",type=Item},
+	{name="BraverProof",chinese="勇者证",type=Item},
+	{name="BishopRing",chinese="司祭戒指",type=Item},
+	{name="HeavenWhip",chinese="天空鞭",type=Item},
+	{name="Olean",chinese="奥利安弓",type=Item},
+	--卡
+	{name="SilverCard",chinese="银卡",type=Item},
+	{name="MemberCard",chinese="会员卡",type=Item},
+	--宝珠
+	{name="EarthOrb",chinese="大地珠",type=Item},
+	{name="StarOrb",chinese="星珠",type=Item},
+	{name="LightOrb",chinese="光珠",type=Item},
+}

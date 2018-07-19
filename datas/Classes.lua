@@ -98,3 +98,13 @@ ClassesData={
 	{name="Shaman",chinese="祈祷师"},
 	{name="Druid",chinese="德鲁伊"},
 }
+
+--特效表
+specialEffectList={
+	{"knightBreak","isKnight"},--破骑武器
+	{"armorBreak","isArmor"},--破甲武器
+	{"antiAir","isAirForce"},--对空武器
+	{"dragonSlay","isDragon"},--杀龙武器
+	{"ballistaBreak","isBallista"},--杀弩车武器
+	{"monsterSlay","isMonster"},--杀怪武器
+}
