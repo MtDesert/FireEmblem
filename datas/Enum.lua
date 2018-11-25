@@ -1,4 +1,4 @@
---武器类型
+--武器类型,一般来说特定的职业或者特定的角色才会装备特定的武器
 WeaponType={
 	"Knife",--刀
 	"Sword",--剑
@@ -8,15 +8,24 @@ WeaponType={
 	"Anima",--理魔法
 	"Light",--光魔法
 	"Dark",--暗魔法
-	"Wand"--杖
+	"Wand",--杖
+	"Claw",--爪
+	"Fang",--牙
+	"Breath"--吐息
 }
 
-Attribute={
+--属性,某些人物或者物品会带有特定的属性
+Attributes={
 	"None",--无属性
 	"Wind",--风
+	"Ground",--地
+	"Water",--水
 	"Ice",--冰
 	"Fire",--火
+	"Flame",--炎
+	"Electric",--电
 	"Thunder",--雷
+	"Saint",--圣
 	"Anima",--理
 	"Light",--光
 	"Dark"--暗

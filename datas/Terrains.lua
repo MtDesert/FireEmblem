@@ -1,0 +1,14 @@
+--地形资料表
+Terrains={
+	--自然地形
+	{name="Plain",chinese="平原",avd=0,def=0},
+	{name="Wood",chinese="林",avd=0,def=0},
+	{name="Hill",chinese="丘",avd=0,def=0},
+	{name="River",chinese="河",avd=0,def=0},
+	{name="Sea",chinese="海",avd=0,def=0},
+	{name="Shoal",chinese="浅滩",avd=0,def=0},
+	{name="Reef",chinese="暗礁",avd=0,def=0},
+	--人工地形
+	{name="Road",chinese="道路",avd=0,def=0},
+	{name="Bridge",chinese="桥",avd=0,def=0},
+}
