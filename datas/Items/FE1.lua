@@ -20,7 +20,7 @@ ItemsData={
 	{name="BraverProof",chinese="勇者证",type=Item},
 	{name="BishopRing",chinese="司祭戒指",type=Item},
 	{name="HeavenWhip",chinese="天空鞭",type=Item},
-	{name="Olean",chinese="奥利安弓",type=Item},
+	{name="OleanBow",chinese="奥利安弓",type=Item},
 	--卡
 	{name="SilverCard",chinese="银卡",type=Item},
 	{name="MemberCard",chinese="会员卡",type=Item},
@@ -28,4 +28,9 @@ ItemsData={
 	{name="EarthOrb",chinese="大地珠",type=Item},
 	{name="StarOrb",chinese="星珠",type=Item},
 	{name="LightOrb",chinese="光珠",type=Item},
+	--龙石
+	{name="FireDragonStone",chinese="火龙石",type=DragonStone,weight=3,might=16,hit=80,def=12},
+	{name="GodDragonStone",chinese="神龙石",type=DragonStone,weight=1,might=12,hit=100,def=15},
+	{name="DemonDragonStone",chinese="魔龙石",type=DragonStone,weight=6,might=18,hit=90,def=16},
+	{name="EarthDragonStone",chinese="地龙石",type=DragonStone,weight=10,might=20,hit=70,def=23},
 }

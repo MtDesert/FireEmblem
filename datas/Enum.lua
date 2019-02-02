@@ -1,32 +1,59 @@
 --武器类型,一般来说特定的职业或者特定的角色才会装备特定的武器
-WeaponType={
-	"Knife",--刀
-	"Sword",--剑
-	"Spear",--枪
-	"Axe",--斧
-	"Bow",--弓
-	"Anima",--理魔法
-	"Light",--光魔法
-	"Dark",--暗魔法
-	"Wand",--杖
-	"Claw",--爪
-	"Fang",--牙
-	"Breath"--吐息
+ItemType={
+	--持有性物品
+	{name="Knife",chinese="刀",isPhysic=true},
+	{name="Sword",chinese="剑",isPhysic=true},
+	{name="Spear",chinese="枪",isPhysic=true},
+	{name="Pike",chinese="矛",isPhysic=true},
+	{name="Axe",chinese="斧",isPhysic=true},
+	{name="Bow",chinese="弓",isPhysic=true},
+	{name="Anima",chinese="理",isMagic=true},
+	{name="Light",chinese="光",isMagic=true},
+	{name="Dark",chinese="暗",isMagic=true},
+	{name="Wand",chinese="杖",isMagic=true},
+	--身体部分
+	{name="Claw",chinese="爪",isMagic=true},
+	{name="Fang",chinese="牙",isMagic=true},
 }
 
 --属性,某些人物或者物品会带有特定的属性
 Attributes={
-	"None",--无属性
-	"Wind",--风
-	"Ground",--地
-	"Water",--水
-	"Ice",--冰
-	"Fire",--火
-	"Flame",--炎
-	"Electric",--电
-	"Thunder",--雷
-	"Saint",--圣
-	"Anima",--理
-	"Light",--光
-	"Dark"--暗
+	{name="None",chinese="无"},
+	{name="Wind",chinese="风"},
+	{name="Earth",chinese="地"},
+	{name="Water",chinese="水"},
+	{name="Ice",chinese="冰"},
+	{name="Fire",chinese="火"},
+	{name="Flame",chinese="炎"},
+	{name="Electric",chinese="电"},
+	{name="Thunder",chinese="雷"},
+	{name="Saint",chinese="圣"},
+	{name="Anima",chinese="理"},
+	{name="Light",chinese="光"},
+	{name="Dark",chinese="暗"},
 }
+
+--血统
+BloodLine={
+	--龙族
+	{name="GodDragon",chinese="神龙"},
+	{name="FireDragon",chinese="火龙"},
+	{name="IceDragon",chinese="冰龙"},
+	{name="FlyDragon",chinese="飞龙"},
+	{name="DemonDragon",chinese="魔龙"},
+	{name="EarthDragon",chinese="地龙"},
+	{name="DarkDragon",chinese="暗龙"},
+	--12圣战士
+}
+
+--武器克制关系
+WeaponRestrainRelation={
+	--物理武器
+	["Spear","Sword"],
+	["Axe","Spear"],
+	["Sword","Axe"],
+	--魔法武器
+	["Anima","Light"],
+	["Light","Dark"],
+	["Dark","Anima"],
+},
